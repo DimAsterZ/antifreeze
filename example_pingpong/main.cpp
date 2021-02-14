@@ -1,11 +1,3 @@
-# antifreeze
-
-## C++ Actor Model
-
-******
-### Example of Ping-Pong Actors:  
-
-```c++
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -61,19 +53,3 @@ int main()
 
 	return 0;
 }
-```
-### Console:  
-```
-Posting start message.
-actor1: 1
-actor2: 2
-actor1: 3
-actor2: 4
-actor1: 5
-actor2: 6
-actor1: 7
-actor2: 8
-actor1: 9
-Posting stop message.
-actor2: 10
-```
