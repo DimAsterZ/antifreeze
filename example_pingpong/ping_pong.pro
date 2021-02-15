@@ -5,7 +5,6 @@ CONFIG -= qt
 
 QMAKE_CXXFLAGS_GNUCXX11 = -std=c++17
 QMAKE_CXXFLAGS_GNUCXX1Z = -std=c++17
-CONFIG += c++17
 win32: QMAKE_CXXFLAGS += /std:c++17
 unix: QMAKE_CXXFLAGS += -std=c++17
 unix: QMAKE_CXX = g++-9
@@ -18,7 +17,7 @@ SOURCES += \
 
 ################# include antifreeze #########################
 include($$PWD/../../antifreeze/include.pri)
-LIBS += -L$$PWD/../../antifreeze/bin
+unix:LIBS += -L$$PWD/../../antifreeze/bin
 ##############################################################
 
 unix:LIBS += -lpthread
