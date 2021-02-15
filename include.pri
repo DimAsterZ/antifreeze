@@ -26,11 +26,11 @@ INCLUDEPATH += $$PWD/../antifreeze/include
     win32 {
             CONFIG(release, debug|release) {
                     LIBS += -L$$PWD/../../antifreeze/bin/ -lantifreeze
-                    QMAKE_POST_LINK += $$copyFile($$PWD/../../antifreeze/bin/antifreeze.dll, $$DESTDIR/*.dll)
+                    QMAKE_POST_LINK += $$copyFile($$PWD/../antifreeze/bin/antifreeze.dll, $$DESTDIR/*.dll)
             }
             else:CONFIG(debug, debug|release) {
                     LIBS += -L$$PWD/../../antifreeze/bin/ -lantifreezed
-                    QMAKE_POST_LINK += $$copyFile($$PWD/../../antifreeze/bin/antifreezed.dll, $$DESTDIR/*.dll)
+                    QMAKE_POST_LINK += $$copyFile($$PWD/../antifreeze/bin/antifreezed.dll, $$DESTDIR/*.dll)
             }
     } else:unix {
         CONFIG(debug, debug|release) {

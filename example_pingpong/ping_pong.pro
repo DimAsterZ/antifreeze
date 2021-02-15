@@ -18,7 +18,7 @@ SOURCES += \
 
 ################# include antifreeze #########################
 include($$PWD/../../antifreeze/include.pri)
-unix:LIBS += -L$$PWD/../../antifreeze/bin
+LIBS += -L$$PWD/../../antifreeze/bin
 ##############################################################
 
 unix:LIBS += -lpthread

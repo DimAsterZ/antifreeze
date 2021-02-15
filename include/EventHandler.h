@@ -8,11 +8,11 @@
 
 #include "antifreeze_global.h"
 
-class AsyncOperProcessor;
-class Reactor;
-
 namespace antifreeze
 {
+
+class AsyncOperProcessor;
+class Reactor;
 
 // Класс подписывается на сообщения,
 //  которые он умеет (и ревностно любит) обрабатывать.
