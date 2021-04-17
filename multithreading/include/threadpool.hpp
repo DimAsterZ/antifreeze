@@ -40,7 +40,7 @@ public:
 	//      то потоки будут ожидать таски постоянно опрашивая очередь и не засыпая,
 	//	    таким образом реакция на появление новой задачи станет более быстрой, 
 	//	    но в паузах, когда нечего делать, будет лишняя нагрузка на процессор.
-	ThreadPool(unsigned int threadCount = 0, bool intensity = false) 
+	SimpleThreadPool(unsigned int threadCount = 0, bool intensity = false) 
 		: m_intensity(intensity), m_threadCount(0), m_done(false),
 		  m_joiner(m_threads)
 	{
@@ -50,7 +50,7 @@ public:
 		increaseThreads(threadCount);
 	}
 	
-	~ThreadPool()
+	~SimpleThreadPool()
 	{
 		m_done = true; // говорим потокам - пора закругляться
 		
